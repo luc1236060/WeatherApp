@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TempButtons {
+    width: 100%;
+}
+
+.TimeDial {
+    width: 100%;
+}
+
+.Temp {
+    width: 100%;
+}
+
+.Weather {
+    width: 100%;
+}
