@@ -1,18 +1,57 @@
 #root {
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0rem;
   text-align: center;
 }
 
 html, body {
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url('./assets/background1.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .html, body {
+    width: 1024px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .html, body {
+    width: 768px;
+    height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .html, body {
+    width: 425px;
+    height: auto;
+  }
+}
+
+@media (max-width: 375) {
+  .html, body {
+    width: 375;
+    height: auto;
+  }
+}
+
+@media (max-width: 320) {
+  .html, body {
+    width: 320;
+    height: auto;
+  }
 }
 

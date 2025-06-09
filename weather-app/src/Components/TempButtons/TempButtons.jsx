@@ -1,10 +1,7 @@
 import React from "react";
-import "./TempButtons.css"
-import celsius from "../../assets/celsius.png"
-import fahrenheit from "../../assets/fahrenheit.png"
+import "./TempButtons.css";
 
-const TempButtons = () => {
-    const [unit, changeUnit] = React.useState('F')
+const TempButtons = ({unit, changeUnit}) => {
 
     const switchUnit = (newUnit) => {
         if (newUnit != unit) {
@@ -20,17 +17,16 @@ const TempButtons = () => {
                     className={`toggle-button ${unit == 'C' ? 'active' : ''}`}
                     aria-label="Celsius"
                 >
-                   C{/*<img src={celsius} alt="celsius"/> */}
+                   °C
                 </button>
                 <button
                     onClick={() =>switchUnit('F')} 
                     className={`toggle-button ${unit == 'F' ? 'active' : ''}`}
                     aria-label="Fahrenheit"
                 >
-                    F{/*<img src={fahrenheit} alt="fahrenheit"/>*/}
+                    °F
                 </button>
             </div>
-
         </div>
     );
 };

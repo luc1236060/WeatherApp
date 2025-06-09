@@ -1,5 +1,17 @@
+.timedial-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
 .TimeDial img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform-origin: center;
 }

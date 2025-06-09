@@ -1,39 +1,389 @@
 .temp-layout {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 40px; 
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 20%;
+    background-color: rgba(19, 189, 231, 0.9);
+    box-shadow: -7px 7px 20px rgba(0,0,0,0.3);
+}
+
+.top h1 {
+    font-style: bold;
+}
+
+.temp-output h2{
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.top p {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.temp-default {
+    color: gray;
+}
+
+.temp-colder {
+    color: darkblue;
+}
+
+.temp-cold {
+    color: blue;
+}
+
+.temp-chilly {
+    color: royalblue;
+}
+
+.temp-cool {
+    color: lightblue;
+}
+
+.temp-neutral {
+    color: white;
+}
+
+.temp-warm {
+    color: orange;
+}
+
+.temp-warmer {
+    color: darkorange;
+}
+
+.temp-hot {
+    color: salmon
+}
+
+.temp-hotter {
+    color: red;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 220px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px 50px 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    transition: border 0.3s ease;
+    background-color: #2A6496;
+}
+
+.input-wrapper input[type="text"]:focus {
+    outline: none;
+    border-color: #00ffc8;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.input-wrapper button[type="submit"] {
+    position: absolute;
+    top: 15%;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.input-wrapper button[type="submit"]:hover {
+    background-color: #00ffc8;
+    box-shadow: rgba(0,0,0,0.5) 0 8px 16px;
+    transform: translateY(-2px);
+}
+
+.input-wrapper button[type="submit"]:active {
+    background-color: #2A6496;
+    box-shadow: none;
+    transform: translateY(0px);
 }
 
 .bottom {
     display: flex;
     flex-direction: column;
-    gap: 100px;
-
-    outline: 1px dashed grey;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+    width: 60%;
+    background-color: rgba(122, 214, 245, 0.75);
+    box-shadow: -7px 7px 20px rgba(0,0,0,0.3);
 }
 
 .current-conditions {
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding-top: 30px;
+    background-color: rgb(63, 94, 233, .9);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+}
 
-    outline: 1px solid blue;
+.current-conditions i {
+    font-size: 50px;
+}
+
+.current-conditions p {
+    font-size: 25px;
 }
 
 .other-details {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 200px
+    width: 70%;
+    gap: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: rgb(119, 138, 241);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
 }
 
-.humidity {
-
-    outline: 1px solid lime;
+.other-details i {
+    font-size: 30px;
 }
 
-.wind-speed {
-
-    outline: 1px solid lime;
+.other-details p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 }
 
-.cloud-over-total {
+@media (max-width: 1440px) {
+    .top {
+        width: 35%;
+    }
 
-    outline: 1px solid lime;
+    .top h1 {
+        font-size: 40px;
+    }
+
+    .top h2 {
+        font-size: 26px;
+        
+    }
+
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .input-wrapper {
+        width: 300px;
+    }
+
+    .bottom { 
+        width: 75%;
+    }
+    
+    .other-details {
+        gap: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .top {
+        width: 40%;
+
+    }
+
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .bottom {
+        width: 70%;
+    }
+
+    .other-details {
+        width: 80%;
+        gap: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        padding: 0;
+        gap: 0;
+        margin: 0 auto;
+    }
+    
+    .top h2 {
+        font-size: 22px;
+    }
+
+    .input-wrapper {
+        width: 225px;
+    }
+
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .current-conditions i {
+        font-size: 40px;
+    }
+
+    .current-conditions p{
+        font-size: 20px;
+    }
+
+    .other-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        width: 85%;
+    }
+
+    .other-details i{
+        font-size: 30px;
+    }
+
+    .other-details p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .top {
+        width: 65%;
+    }
+    
+    .top h1 {
+        font-size: 25px;
+    }
+
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .bottom {
+        width: 90%;
+    }
+
+    .current-conditions {
+        width: 65%;
+    }
+
+    .other-details {
+        gap: 30px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 375) {
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .top {
+        width: 80%;
+    }
+
+    .top h1 {
+        font-size: 35px;
+    }
+
+    .top h2 {
+        font-size: 23px;
+    }
+
+    .temp-output h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .top p {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .input-wrapper {
+        width: 250px;
+    }
+
+    .bottom {
+        gap: 20px;
+    }
+    .other-details {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .other-details h3 {
+        font-size: 20px
+    }
+
+    .other-details i {
+        font-size: 35px;
+    }
+
+    .other-details p {
+        font-size: 17px
+    }
 }
